@@ -1,4 +1,4 @@
-# California Housing Prices Dataset
+# ML Demo for California Housing Prices Dataset
 ## Overview
 
 ## Project Structure
@@ -28,11 +28,11 @@ To get started, follow the steps below:
 
 Clone the repository by running the following command:
 ```bash
-git clone 
+git clone https://github.com/ogaloglu/ml-demo-california-housing-prices.git
 ```
-Change your current directory to `california-housing-task` using the command:
+Change your current directory to `ml-demo-california-housing-prices` using the command:
 ```bash
-cd california-housing-task
+cd ml-demo-california-housing-prices
 ```
 ### Running Docker Application
 Build the Docker image by executing the following command:
@@ -65,5 +65,10 @@ notebooks/modeling.ipynb
 ## Dataset
 ## Models
 ## Metrics
+In order to quantify our model’s performance, we look at the RMSE and Adjusted R² of our model.
+
+RMSE indicates the absolute fit of the model to the data and hence, how close the observed data points are to the model’s predicted values. Lower values of RMSE indicate a better fit. The values for RMSE we get through our pricing model might be comparatively higher as they’ll be in dollars but we’ll be looking out for the least possible option.
+
+Adjusted R² like simple R² describes how ‘good’ the model is at making predictions. However, adding more independent variables or predictors to a regression model tends to increase the R-squared value, which raises the temptation to add even more variables resulting in overfitting. Hence, Adjusted R-squared is preferred to determine how reliable the correlation between the predicted and actual values of the target variable is and how much it is determined by the addition of independent variables in order to avoid overfitting.
 ## Results
 ## Reasoining
