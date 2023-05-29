@@ -161,3 +161,7 @@ cython_debug/
 
 # WandB related files
 *wandb/
+
+# Data partitions
+/data/X*
+/data/y*
