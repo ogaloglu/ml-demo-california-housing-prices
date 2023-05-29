@@ -2,11 +2,11 @@
 import gradio as gr
 import pandas as pd
 
-from src.utils import load_file, ColumnDropperTransformer
+from src.utils import load_file
 
 
 preprocessor = load_file("preprocessor.joblib")
-model = load_file("xg_reg.joblib")
+model = load_file("best_model.joblib")
 
 
 def predict(
@@ -20,6 +20,7 @@ def predict(
     median_income: float,
     ocean_proximity: str,
 ) -> float:
+    """."""
     df = pd.DataFrame(
         {
             "longitude": longitude,
