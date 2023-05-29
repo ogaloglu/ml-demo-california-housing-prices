@@ -48,6 +48,7 @@ with gr.Blocks() as app:
             label="Longitude",
             info="A measure of how far west a house is; a higher value is "
             "farther west",
+            value=-120,
         )
         latitude = gr.Slider(
             32,
@@ -55,6 +56,7 @@ with gr.Blocks() as app:
             label="Latitude",
             info="A measure of how far north a house is; a higher value is "
             "farther north",
+            value=37,
         )
     with gr.Row():
         housing_median_age = gr.Slider(
@@ -63,6 +65,7 @@ with gr.Blocks() as app:
             label="Housing Median Age",
             info="Median age of a house within a block; a lower number is a "
             "newer building",
+            value=20,
         )
         total_rooms = gr.Slider(
             2,
@@ -70,6 +73,7 @@ with gr.Blocks() as app:
             step=1,
             label="Total Rooms",
             info="Total number of rooms within a block",
+            value=20000,
         )
     with gr.Row():
         total_bedrooms = gr.Slider(
@@ -78,12 +82,14 @@ with gr.Blocks() as app:
             step=1,
             label="Total Bedrooms",
             info="Total number of bedrooms within a block",
+            value=3000,
         )
         population = gr.Slider(
             3,
             40000,
             label="Population",
             info="Total number of people residing within a block",
+            value=20000.0,
         )
     with gr.Row():
         households = gr.Slider(
@@ -92,6 +98,7 @@ with gr.Blocks() as app:
             label="Households",
             info="Total number of households, a group of people residing "
             "within a home unit, for a block",
+            value=3000.0,
         )
         median_income = gr.Slider(
             0,
@@ -99,6 +106,7 @@ with gr.Blocks() as app:
             label="Median Income",
             info="Median income for households within a block of"
             "houses (measured in tens of thousands of US Dollars)",
+            value=7.0,
         )
     ocean_proximity = gr.Radio(
         ["NEAR BAY", "<1H OCEAN", "INLAND", "NEAR OCEAN", "ISLAND"],
