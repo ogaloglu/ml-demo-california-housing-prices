@@ -1,11 +1,10 @@
 """Training script for XGBoost model using WandB integration for logging."""
-import math
 import logging
+import math
 
 import wandb
+from sklearn.metrics import mean_squared_error, r2_score
 from xgboost import XGBRegressor
-
-from sklearn.metrics import r2_score, mean_squared_error
 
 from src.utils import get_data, load_file, save_file
 
@@ -19,7 +18,6 @@ preprocessor = load_file("preprocessor.joblib")
 preprocessed_X_train = preprocessor.transform(X_train)
 preprocessed_X_val = preprocessor.transform(X_val)
 logger.info("Dataset is preprocessed.")
-
 
 best_r2 = 0
 
@@ -69,8 +67,6 @@ sweep_configs = {
 
 
 if __name__ == "__main__":
-    sweep_id = wandb.sweep(
-        sweep_configs, project="california-housing-prices"
-    )
+    sweep_id = wandb.sweep(sweep_configs, project="california-housing-prices")
     wandb.agent(sweep_id=sweep_id, function=train_model, count=30)
     logger.info(f"R2 score of the best model: {best_r2}")

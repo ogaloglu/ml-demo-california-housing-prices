@@ -4,7 +4,6 @@ import pandas as pd
 
 from src.utils import load_file
 
-
 preprocessor = load_file("preprocessor.joblib")
 model = load_file("best_model.joblib")
 
@@ -20,7 +19,7 @@ def predict(
     median_income: float,
     ocean_proximity: str,
 ) -> float:
-    """."""
+    """Prediction function for inference."""
     df = pd.DataFrame(
         {
             "longitude": longitude,

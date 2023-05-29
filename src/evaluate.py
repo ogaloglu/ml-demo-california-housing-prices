@@ -3,7 +3,7 @@ import argparse
 import logging
 import math
 
-from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.metrics import mean_squared_error, r2_score
 
 from src.utils import get_data, load_file
 
