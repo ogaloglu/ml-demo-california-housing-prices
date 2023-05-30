@@ -19,7 +19,7 @@ ml-demo-california-housing-prices/
 │   ├── data_exploration.ipynb
 │   └── modeling.ipynb
 ├── app.py
-├── .dockerigj0re
+├── .dockerignore
 ├── .gitignore
 ├── Dockerfile
 ├── README.md
